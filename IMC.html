@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> IMC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+       <script>
+        var nome = prompt('Insira seu nome:')
+        var altura = prompt('Insira sua altura (em centimetros)')
+        var peso = prompt('Insira seu peso (em Kg)')
+        
+        altura = parseFloat(altura)
+        peso = parseFloat(peso)
+        
+        altura = altura / 100
+        
+    document.write('<h1> Nome: ' + nome + '</p> Altura: ' + altura + '</p> Peso: ' + peso)
+    
+        var M = peso / (altura * altura)
+        
+        document.write('<h1> <p> Sua massa corporal é ' + M)
+        document.write('<h1> </p> Sua classificação é:')
+        
+        if (M < 16){
+            document.write('<h1> </p>     Baixo peso MUITO GRAVE!')
+        } else if (M >= 16 && M < 17){
+            document.write('<h1> </p>     Baixo peso Grave!')
+        }  else if (M >= 17 && M < 18.49){
+            document.write('<h1> </p>     Baixo peso')
+        }   else if (M >= 18.50 && M < 24.99){
+            document.write('<h1> </p>     Peso na Média')
+        }   else if (M >= 25 && M < 29.99){
+            document.write('<h1> </p>     Sobrepeso')
+        }   else if (M >= 30 && M < 34.99){
+            document.write('<h1> </p>     Obesidade grau 1')
+        }   else if (M >= 35 && M < 40){
+            document.write('<h1> </p>     Obesidade grau 2')
+        }   else if (M >= 40){
+            document.write('<h1> </p>     Obesidade grau 3!')
+        }
+            
+          
+       </script>
+           
+    
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
